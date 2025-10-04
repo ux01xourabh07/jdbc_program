@@ -21,6 +21,13 @@ public class Main {
             else {
                 System.out.println("connection not maded");
             }
+            //3.Create statment object
+            String query = "insert into list value(108,'pavbaji', 'jab se','delhie' )";
+            Statement st = con.createStatement();
+           //4. Query Execution
+            st.execute(query);
+            System.out.println("successfully ho gaya");
+            //5. close connections
             con.close();
         } catch (Exception e) {
             System.out.println(e);
